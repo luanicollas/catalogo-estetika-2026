@@ -1,0 +1,876 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<title>Dona Coelha | Catálogo Estetika 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pink:#E31C79;
+    --pink-dark:#B8125F;
+    --pink-light:#FCE4EF;
+    --purple:#7C3AED;
+    --purple-light:#F3ECFC;
+    --gold:#F2B705;
+    --cream:#FFF9F6;
+    --dark:#2B1F2D;
+    --gray:#8A7F8C;
+    --white:#ffffff;
+    --radius:20px;
+    --shadow:0 10px 30px rgba(184,18,95,0.10);
+    --shadow-sm:0 4px 14px rgba(43,31,45,0.08);
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    font-family:'Nunito',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
+    background:var(--cream);
+    color:var(--dark);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Poppins',sans-serif;margin:0;}
+  p{margin:0;}
+  img{max-width:100%;display:block;}
+  a{color:inherit;}
+  [hidden]{display:none !important;}
+
+  /* ---------- HEADER ---------- */
+  header{
+    position:sticky;top:0;z-index:50;
+    background:var(--white);
+    box-shadow:0 2px 12px rgba(43,31,45,0.06);
+  }
+  .header-inner{
+    max-width:1240px;margin:0 auto;
+    display:flex;align-items:center;justify-content:space-between;
+    padding:14px 20px;
+  }
+  .logo{
+    display:flex;align-items:center;gap:8px;
+    font-family:'Poppins',sans-serif;font-weight:800;font-size:1.3rem;
+    color:var(--pink-dark);text-decoration:none;letter-spacing:-0.5px;
+    cursor:pointer;
+  }
+  .logo span.sub{
+    display:block;font-family:'Nunito',sans-serif;font-weight:700;font-size:0.6rem;
+    color:var(--purple);letter-spacing:1.5px;text-transform:uppercase;
+  }
+  nav.menu{display:flex;gap:6px;align-items:center;}
+  nav.menu a{
+    font-weight:700;font-size:0.92rem;text-decoration:none;color:var(--dark);
+    padding:10px 16px;border-radius:999px;transition:.2s;
+  }
+  nav.menu a:hover{background:var(--pink-light);color:var(--pink-dark);}
+  nav.menu a.active-link{background:var(--pink);color:#fff;}
+  .burger{display:none;background:none;border:none;font-size:1.6rem;cursor:pointer;color:var(--pink-dark);}
+
+  @media(max-width:820px){
+    nav.menu{
+      position:fixed;top:64px;left:0;right:0;bottom:0;
+      background:var(--white);flex-direction:column;align-items:stretch;
+      padding:20px;gap:4px;transform:translateX(100%);transition:transform .25s ease;
+      overflow-y:auto;
+    }
+    nav.menu.open{transform:translateX(0);}
+    nav.menu a{padding:16px 14px;border-bottom:1px solid var(--pink-light);border-radius:12px;font-size:1.05rem;}
+    .burger{display:block;}
+  }
+
+  /* ---------- HERO (catálogo) ---------- */
+  .hero{
+    background:linear-gradient(135deg,var(--pink) 0%,var(--pink-dark) 55%,var(--purple) 130%);
+    color:var(--white);
+    padding:52px 20px 64px;
+    text-align:center;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 15% 20%, rgba(255,255,255,0.15) 0, transparent 40%),
+               radial-gradient(circle at 85% 80%, rgba(255,255,255,0.12) 0, transparent 45%);
+  }
+  .hero-inner{position:relative;max-width:720px;margin:0 auto;}
+  .hero .eyebrow{
+    display:inline-block;background:rgba(255,255,255,0.18);
+    padding:6px 16px;border-radius:999px;font-weight:700;font-size:0.8rem;
+    letter-spacing:1px;text-transform:uppercase;margin-bottom:16px;
+  }
+  .hero h1{font-size:clamp(1.8rem,5vw,2.8rem);font-weight:800;line-height:1.15;}
+  .hero p.tagline{margin-top:12px;font-size:1.05rem;opacity:0.95;font-weight:600;}
+  .hero-meta{
+    margin-top:26px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center;
+  }
+  .hero-meta span{
+    background:rgba(255,255,255,0.16);border:1px solid rgba(255,255,255,0.3);
+    padding:8px 14px;border-radius:999px;font-size:0.85rem;font-weight:700;
+  }
+
+  /* ---------- PAGE BANNER (formulários) ---------- */
+  .page-banner{
+    background:linear-gradient(135deg,var(--pink) 0%,var(--pink-dark) 55%,var(--purple) 130%);
+    color:#fff;padding:40px 20px 46px;text-align:center;position:relative;overflow:hidden;
+  }
+  .page-banner::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 85% 20%, rgba(255,255,255,0.14) 0, transparent 40%);
+  }
+  .page-banner-inner{position:relative;max-width:600px;margin:0 auto;}
+  .back-link{
+    display:inline-flex;align-items:center;gap:6px;color:#fff;text-decoration:none;font-weight:700;
+    font-size:0.8rem;background:rgba(255,255,255,0.18);padding:6px 14px;border-radius:999px;margin-bottom:16px;
+  }
+  .back-link:hover{background:rgba(255,255,255,0.28);}
+  .page-banner h1{font-size:clamp(1.5rem,4vw,2.1rem);font-weight:800;}
+  .page-banner p{margin-top:8px;opacity:.95;font-size:0.95rem;line-height:1.5;}
+
+  /* ---------- SECTION SHELL ---------- */
+  .section-head{text-align:center;max-width:600px;margin:0 auto 34px;}
+  .section-head .kicker{
+    color:var(--purple);font-weight:800;letter-spacing:1.5px;text-transform:uppercase;font-size:0.75rem;
+  }
+  .section-head h2{font-size:1.9rem;margin-top:6px;color:var(--dark);}
+  .section-head p{margin-top:10px;color:var(--gray);font-size:1rem;line-height:1.5;}
+
+  /* ---------- FILTERS ---------- */
+  .filters{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-bottom:36px;}
+  .filters button{
+    border:2px solid var(--pink-light);background:var(--white);color:var(--dark);
+    padding:9px 20px;border-radius:999px;font-weight:700;font-size:0.9rem;cursor:pointer;transition:.2s;
+    font-family:'Nunito',sans-serif;
+  }
+  .filters button.active,.filters button:hover{
+    background:var(--pink);border-color:var(--pink);color:#fff;
+  }
+
+  /* ---------- PRODUCT GRID (maior, mais destaque) ---------- */
+  .grid{
+    display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:32px;
+  }
+  .card{
+    background:var(--white);border-radius:24px;overflow:hidden;
+    box-shadow:var(--shadow-sm);transition:transform .2s, box-shadow .2s;
+    display:flex;flex-direction:column;
+  }
+  .card:hover{transform:translateY(-5px);box-shadow:var(--shadow);}
+  .card-img{
+    position:relative;aspect-ratio:1/1;background:linear-gradient(135deg,var(--pink-light),var(--purple-light));
+    display:flex;align-items:center;justify-content:center;
+  }
+  .card-img img{width:100%;height:100%;object-fit:cover;}
+  .card-img .fallback{font-family:'Poppins',sans-serif;font-weight:800;font-size:3rem;color:var(--pink);opacity:.5;}
+  .badges{position:absolute;top:12px;left:12px;display:flex;flex-direction:column;gap:6px;align-items:flex-start;}
+  .badge{
+    font-size:0.72rem;font-weight:800;padding:6px 12px;border-radius:999px;
+    color:#fff;letter-spacing:.3px;box-shadow:0 3px 8px rgba(0,0,0,0.15);
+  }
+  .badge.deal{background:var(--gold);color:#3a2c00;}
+  .badge.exclusive{background:var(--purple);}
+  .badge.limited{background:var(--pink-dark);}
+  .cat-tag{
+    position:absolute;top:12px;right:12px;background:rgba(255,255,255,0.9);
+    color:var(--purple);font-weight:800;font-size:0.68rem;padding:5px 12px;border-radius:999px;
+    text-transform:uppercase;letter-spacing:.5px;
+  }
+  .card-body{padding:24px 24px 26px;display:flex;flex-direction:column;gap:12px;flex:1;}
+  .card-body h3{font-size:1.35rem;color:var(--dark);line-height:1.25;}
+  .card-body .desc{font-size:0.95rem;color:var(--gray);line-height:1.5;}
+  .variants{display:flex;gap:6px;flex-wrap:wrap;}
+  .variant-pill{
+    font-size:0.75rem;font-weight:700;padding:4px 12px;border-radius:999px;
+    background:var(--pink-light);color:var(--pink-dark);
+  }
+  .benefits{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px;}
+  .benefits li{font-size:0.87rem;color:var(--dark);padding-left:20px;position:relative;line-height:1.45;}
+  .benefits li::before{content:"✓";position:absolute;left:0;color:var(--purple);font-weight:800;}
+  .price-row{
+    margin-top:auto;padding-top:14px;border-top:1px dashed var(--pink-light);
+    display:flex;align-items:baseline;justify-content:space-between;
+  }
+  .price{font-family:'Poppins',sans-serif;font-weight:800;font-size:1.65rem;color:var(--pink-dark);}
+  .price small{font-family:'Nunito',sans-serif;font-weight:700;font-size:0.72rem;color:var(--gray);}
+  .old-price{font-size:0.82rem;color:var(--gray);text-decoration:line-through;}
+
+  /* ---------- FORM SECTIONS ---------- */
+  .form-section{background:var(--white);}
+  .panel{
+    background:var(--white);border-radius:var(--radius);box-shadow:var(--shadow-sm);
+    padding:28px;max-width:760px;margin:0 auto;
+  }
+  .panel + .panel{margin-top:24px;}
+  .field-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px;}
+  @media(max-width:600px){.field-row{grid-template-columns:1fr;}}
+  label{display:block;font-weight:700;font-size:0.82rem;margin-bottom:6px;color:var(--dark);}
+  input,select,textarea{
+    width:100%;padding:11px 13px;border-radius:12px;border:2px solid var(--pink-light);
+    font-family:'Nunito',sans-serif;font-size:0.92rem;background:var(--cream);color:var(--dark);
+  }
+  input:focus,select:focus,textarea:focus{outline:none;border-color:var(--pink);}
+  .btn{
+    display:inline-flex;align-items:center;gap:8px;justify-content:center;
+    background:var(--pink);color:#fff;border:none;padding:12px 22px;border-radius:999px;
+    font-weight:800;font-size:0.92rem;cursor:pointer;transition:.2s;font-family:'Nunito',sans-serif;
+  }
+  .btn:hover{background:var(--pink-dark);}
+  .btn.secondary{background:var(--purple);}
+  .btn.secondary:hover{background:#6425d1;}
+  .btn.ghost{background:transparent;color:var(--pink-dark);border:2px solid var(--pink-light);}
+  .btn.ghost:hover{background:var(--pink-light);}
+  .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;}
+
+  table{width:100%;border-collapse:collapse;margin-top:18px;font-size:0.85rem;}
+  th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--pink-light);}
+  th{color:var(--purple);font-family:'Poppins',sans-serif;font-size:0.72rem;text-transform:uppercase;letter-spacing:.4px;}
+  tfoot td{font-weight:800;color:var(--pink-dark);border-bottom:none;}
+  .empty-msg{color:var(--gray);font-size:0.85rem;font-style:italic;padding:14px 0;}
+  .remove-btn{background:none;border:none;color:var(--gray);cursor:pointer;font-size:1rem;}
+  .remove-btn:hover{color:var(--pink-dark);}
+  .toast{
+    position:fixed;bottom:20px;left:50%;transform:translateX(-50%) translateY(20px);
+    background:var(--dark);color:#fff;padding:12px 22px;border-radius:999px;font-weight:700;font-size:0.85rem;
+    opacity:0;pointer-events:none;transition:.3s;z-index:100;box-shadow:0 8px 24px rgba(0,0,0,0.25);
+    max-width:90vw;text-align:center;
+  }
+  .toast.show{opacity:1;transform:translateX(-50%) translateY(0);}
+  .hint{font-size:0.78rem;color:var(--gray);margin-top:4px;line-height:1.4;}
+
+  /* ---------- FOOTER (somente apoio) ---------- */
+  footer{background:var(--dark);color:#fff;padding:34px 20px;text-align:center;}
+  footer p{font-size:0.9rem;color:#d8cdd6;}
+  .wpp-link{
+    display:inline-flex;align-items:center;gap:8px;margin-top:12px;
+    background:var(--pink);color:#fff;text-decoration:none;font-weight:800;
+    padding:11px 22px;border-radius:999px;font-size:0.95rem;transition:.2s;
+  }
+  .wpp-link:hover{background:var(--pink-dark);}
+  .footer-bottom{
+    margin-top:22px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.1);
+    font-size:0.78rem;color:#a397a0;
+  }
+  .footer-bottom .heart{color:var(--pink);}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="#/catalogo" class="logo">🐰 Dona Coelha<span class="sub">Estetika 2026</span></a>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu">☰</button>
+    <nav class="menu" id="menu">
+      <a href="#/catalogo" data-route="catalogo">Catálogo</a>
+      <a href="#/vendas" data-route="vendas">Registrar Venda</a>
+      <a href="#/b2b" data-route="b2b">Contato B2B</a>
+      <a href="#/influencer" data-route="influencer">Criador de Conteúdo</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <!-- ===================== PÁGINA: CATÁLOGO ===================== -->
+  <section class="page" id="page-catalogo" data-page="catalogo">
+    <div class="hero">
+      <div class="hero-inner">
+        <span class="eyebrow">Feira Estetika · São Paulo Expo</span>
+        <h1>Catálogo Dona Coelha</h1>
+        <p class="tagline">Prazer sem julgamento, com muito acolhimento 💛 — cada produto, seu preço e seus benefícios, num só lugar.</p>
+        <div class="hero-meta">
+          <span>📅 31/07, 01/08 e 02/08</span>
+          <span>📍 São Paulo Expo</span>
+          <span>⏰ 10h às 20h (sáb. até 19h)</span>
+        </div>
+      </div>
+    </div>
+    <div style="padding:56px 20px 0;max-width:1240px;margin:0 auto;">
+      <div class="section-head">
+        <span class="kicker">Marca própria</span>
+        <h2>Produtos da Estetika 2026</h2>
+        <p>Só produtos de marca própria Dona Coelha. Preços conforme a tabela oficial de vendas do evento.</p>
+      </div>
+      <div class="filters" id="filters">
+        <button class="active" data-filter="todos">Todos</button>
+        <button data-filter="cosmeticos">Cosméticos</button>
+        <button data-filter="toys">Toys</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </div>
+    <div style="height:56px;"></div>
+  </section>
+
+  <!-- ===================== PÁGINA: VENDAS ===================== -->
+  <section class="page" id="page-vendas" data-page="vendas" hidden>
+    <div class="page-banner">
+      <div class="page-banner-inner">
+        <a href="#/catalogo" class="back-link">← Voltar ao catálogo</a>
+        <h1>Registrar Venda</h1>
+        <p>Preencha a cada venda para controle de estoque e cálculo de comissão (10% sobre vendas próprias). Não esqueça de grampear o comprovante na ficha física também.</p>
+      </div>
+    </div>
+    <div style="padding:44px 20px 0;max-width:1240px;margin:0 auto;">
+      <div class="panel">
+        <form id="salesForm">
+          <div class="field-row">
+            <div>
+              <label for="vendedora">Vendedora</label>
+              <select id="vendedora" required>
+                <option value="">Selecione…</option>
+                <option>Dessa</option>
+                <option>Looh</option>
+              </select>
+            </div>
+            <div>
+              <label for="dataVenda">Data</label>
+              <input type="date" id="dataVenda" required>
+            </div>
+          </div>
+
+          <label style="margin-top:6px;">Itens dessa compra</label>
+          <div class="field-row" style="margin-bottom:8px;">
+            <div>
+              <select id="produtoVenda"></select>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <input type="number" id="qtdVenda" value="1" min="1" style="flex:1;">
+              <button type="button" class="btn ghost" id="addItemBtn" style="white-space:nowrap;">+ Item</button>
+            </div>
+          </div>
+
+          <table id="cartTable" style="margin-top:0;">
+            <thead><tr><th>Produto</th><th>Qtd</th><th>Subtotal</th><th></th></tr></thead>
+            <tbody id="cartBody"><tr><td colspan="4" class="empty-msg">Nenhum item adicionado ainda.</td></tr></tbody>
+            <tfoot><tr><td colspan="2">Total da compra</td><td id="cartTotal">R$ 0,00</td><td></td></tr></tfoot>
+          </table>
+
+          <div style="margin:14px 0;">
+            <label for="obsVenda">Observações</label>
+            <input type="text" id="obsVenda" placeholder="Ex.: pagamento em 2x, cor roxa…">
+          </div>
+
+          <div style="margin-bottom:14px;">
+            <label for="comprovanteInput">Comprovante de pagamento (foto) — opcional</label>
+            <input type="file" id="comprovanteInput" accept="image/*" capture="environment">
+            <div id="comprovantePreview" class="hint"></div>
+          </div>
+
+          <div class="btn-row">
+            <button type="submit" class="btn">Finalizar venda</button>
+            <button type="button" class="btn ghost" id="clearSales">Limpar tudo</button>
+          </div>
+        </form>
+
+        <table id="salesTable">
+          <thead>
+            <tr><th>Vendedora</th><th>Produtos</th><th>Total</th><th>Data</th><th>Comprovante</th><th></th></tr>
+          </thead>
+          <tbody id="salesBody"></tbody>
+          <tfoot>
+            <tr><td colspan="2">Total do dia</td><td id="totalDia">R$ 0,00</td><td colspan="3"></td></tr>
+            <tr><td colspan="2">Comissão (10%)</td><td id="comissaoDia">R$ 0,00</td><td colspan="3"></td></tr>
+          </tfoot>
+        </table>
+        <p class="hint">Cada compra (com todos os itens e a foto do comprovante) é enviada automaticamente pra planilha do Google Sheets — a foto é salva no Google Drive e linkada na célula.</p>
+      </div>
+    </div>
+    <div style="height:56px;"></div>
+  </section>
+
+  <!-- ===================== PÁGINA: B2B ===================== -->
+  <section class="page" id="page-b2b" data-page="b2b" hidden>
+    <div class="page-banner">
+      <div class="page-banner-inner">
+        <a href="#/catalogo" class="back-link">← Voltar ao catálogo</a>
+        <h1>Contato B2B</h1>
+        <p>Se surgir um contato com potencial B2B (clínicas, consultórios, distribuidores, parceiros) e Nat ou Renan não estiverem no estande, anote aqui — ele vai direto pra planilha.</p>
+      </div>
+    </div>
+    <div style="padding:44px 20px 0;max-width:1240px;margin:0 auto;">
+      <div class="panel">
+        <form id="b2bForm">
+          <div class="field-row">
+            <div><label for="b2bNome">Nome</label><input type="text" id="b2bNome" required></div>
+            <div><label for="b2bEmpresa">Empresa</label><input type="text" id="b2bEmpresa"></div>
+          </div>
+          <div class="field-row">
+            <div><label for="b2bTelefone">Telefone</label><input type="tel" id="b2bTelefone" required></div>
+            <div><label for="b2bEmail">E-mail</label><input type="email" id="b2bEmail"></div>
+          </div>
+          <div class="field-row">
+            <div><label for="b2bInsta">Instagram</label><input type="text" id="b2bInsta" placeholder="@perfil"></div>
+            <div><label for="b2bObs">Observações</label><input type="text" id="b2bObs" placeholder="Ex.: interesse em distribuição"></div>
+          </div>
+          <div class="btn-row">
+            <button type="submit" class="btn">Salvar contato</button>
+          </div>
+        </form>
+        <div id="b2bList"></div>
+      </div>
+    </div>
+    <div style="height:56px;"></div>
+  </section>
+
+  <!-- ===================== PÁGINA: INFLUENCER ===================== -->
+  <section class="page" id="page-influencer" data-page="influencer" hidden>
+    <div class="page-banner">
+      <div class="page-banner-inner">
+        <a href="#/catalogo" class="back-link">← Voltar ao catálogo</a>
+        <h1>Contato de Influenciador</h1>
+        <p>A Dona Coelha já tem um programa de criadores de conteúdo com pagamento por performance. Anote os dados aqui — vai direto pra planilha e o time confirma o formulário oficial depois.</p>
+      </div>
+    </div>
+    <div style="padding:44px 20px 0;max-width:1240px;margin:0 auto;">
+      <div class="panel">
+        <form id="infForm">
+          <div class="field-row">
+            <div><label for="infNome">Nome</label><input type="text" id="infNome" required></div>
+            <div><label for="infInsta">Instagram</label><input type="text" id="infInsta" placeholder="@perfil" required></div>
+          </div>
+          <div style="margin-bottom:14px;">
+            <label for="infTelefone">Telefone</label>
+            <input type="tel" id="infTelefone">
+          </div>
+          <div class="btn-row">
+            <button type="submit" class="btn">Salvar contato</button>
+          </div>
+        </form>
+        <div id="infList"></div>
+      </div>
+    </div>
+    <div style="height:56px;"></div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Alguma dúvida ou imprevisto? Fale com a Nat:</p>
+  <a class="wpp-link" href="https://wa.me/5511978672905" target="_blank" rel="noopener">📱 Celular de apoio — +55 11 97867-2905</a>
+  <div class="footer-bottom">Feito com <span class="heart">💛</span> pra você arrasar na Estetika.</div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ==================================================================
+   CONFIG — integração com Google Sheets (ver instruções à parte)
+   Cole aqui a URL do Web App do Google Apps Script, terminada em /exec
+   ================================================================== */
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzCTL49RMYoCT93rw3PN-cHWTgDC6TgjZNsGYgN-SKZDXUEDsHhQ-rku5JBfQ2G_fmP/exec';
+
+function sendToSheet(formType, data){
+  if(!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.indexOf('COLE_AQUI') !== -1) return;
+  const body = new URLSearchParams({formType, ...data});
+  fetch(GOOGLE_SCRIPT_URL, { method:'POST', mode:'no-cors', body }).catch(()=>{});
+}
+
+/* ---------------- DATA ---------------- */
+const PRODUCTS = [
+  {
+    id:'escorrega', name:'Escorrega', cat:'cosmeticos', price:59.90, oldPrice:79.90,
+    img:'https://www.donacoelha.com/wp-content/uploads/2026/07/cf7edf1a7c3bd8d32d31642ec938efa6.jpg',
+    desc:'Lubrificante íntimo à base de água, textura leve que não gruda nem escorre.',
+    benefits:['Aloe vera + ácido hialurônico (hidrata)','pH equilibrado, sem perfume','Compatível com camisinha e toys','Vegano e cruelty-free · 100g'],
+    badges:['deal']
+  },
+  {
+    id:'siricutico-gloss', name:'Siricutico Gloss', cat:'cosmeticos', price:59.70,
+    img:'https://www.donacoelha.com/wp-content/uploads/2026/05/600c79102f088ab8f6c5ac5d3d562524.jpg',
+    desc:'Gloss labial excitante, sabor melancia com efeito sensorial de jambu.',
+    benefits:['Brilha, hidrata e "vibra" nos lábios','Textura leve, não gruda','Ótimo pra usar em dupla no beijo'],
+    badges:[]
+  },
+  {
+    id:'siricutico-caneta', name:'Siricutico Caneta', cat:'cosmeticos', price:89.90,
+    img:'https://www.donacoelha.com/wp-content/uploads/2026/03/15df7f33d6299263f299cc43284311ce.jpg',
+    desc:'Gel estimulante em formato caneta, com jambu — esquenta e "formiga" na pele.',
+    benefits:['Aplicador tipo caneta, dá pra desenhar no corpo','Potencializa a lubrificação natural','Sabor melancia · textura leve'],
+    badges:[]
+  },
+  {
+    id:'limpim', name:'Limpim', cat:'cosmeticos', price:59.90,
+    img:'https://www.donacoelha.com/wp-content/uploads/2023/09/dona-coelha-limpim-sabonete.jpg',
+    desc:'Sabonete refrescante em espuma pra higiene íntima e limpeza de toys.',
+    benefits:['Uso unissex (vulva, ânus, pênis)','Sem álcool · antimicrobiano','Aroma tangerina + mentol','Usa com ou sem enxágue · 55ml'],
+    badges:[]
+  },
+  {
+    id:'bora', name:'Bora', cat:'toys', price:397.90, variants:['Roxa','Verde Água'],
+    img:'https://www.donacoelha.com/wp-content/uploads/2024/08/Dona-Coelha-Bora-Roxo-01.jpg',
+    desc:'Calcinha vibratória com controle remoto sem fio (alcance de 5m).',
+    benefits:['9 modos de vibração','Formato concha discreto e magnético','À prova d\'água · recarregável USB'],
+    badges:[]
+  },
+  {
+    id:'borogodo', name:'Borogodó', cat:'toys', price:297.90, variants:['Pink','Roxo'],
+    img:'https://www.donacoelha.com/wp-content/uploads/2020/03/dona-coelha-borogodo.jpg',
+    desc:'Vibrador rabbit com estimulação dupla — clitóris e ponto G ao mesmo tempo.',
+    benefits:['11 modos de vibração × 5 intensidades','Silicone aveludado','Recarregável e à prova d\'água'],
+    badges:['exclusive']
+  },
+  {
+    id:'bossa', name:'Bossa', cat:'toys', price:349.90, variants:['Lilás'],
+    img:'https://www.donacoelha.com/wp-content/uploads/2026/05/dona-coelha-bossa-bullet-mao.jpg',
+    desc:'Vibrador bullet ultra discreto com case-controle remoto integrado.',
+    benefits:['10 níveis de intensidade','Case carregador que também é controle','Até 1h de bateria'],
+    badges:[]
+  },
+  {
+    id:'popi', name:'Pópi', cat:'toys', price:179.90, variants:['Rosa'],
+    img:'https://www.donacoelha.com/wp-content/uploads/2023/04/dona-coelha-popi.jpg',
+    desc:'Vibrador de ponto G em formato de golfinho, clássico e versátil.',
+    benefits:['10 modos de vibração','100% à prova d\'água','Silicone ultra macio · ótimo pra iniciantes'],
+    badges:[]
+  },
+  {
+    id:'serelepe', name:'Serelepe', cat:'toys', price:539.90, variants:['Rosa','Roxo'],
+    img:'https://www.donacoelha.com/wp-content/uploads/2023/08/Dona-Coelha-Serelepe01.jpg',
+    desc:'Sugador + vibrador 2 em 1, com motores independentes.',
+    benefits:['10 modos de vibração + 5 de sucção','Usa junto ou separado','Silicone hipoalergênico'],
+    badges:[]
+  },
+  {
+    id:'sussu', name:'Sussu', cat:'toys', price:397.90, oldPrice:497.90,
+    img:'https://www.donacoelha.com/wp-content/uploads/2022/10/Dona-Coelha-Sussu01.jpg',
+    desc:'Sugador + vibrador 2 em 1, o queridinho premiado da marca.',
+    benefits:['8 modos de sucção + 8 de vibração','Ótimo pra "edging"','Textura aveludada · recarregável USB'],
+    badges:['deal','limited'],
+    note:'⚠️ Talvez não haja unidades para levar ao evento — confirmar estoque com Nat/Renan.'
+  },
+  {
+    id:'triquelique', name:'Triquelique', cat:'toys', price:129.90, variants:['Lilás','Verde'],
+    img:'https://www.donacoelha.com/wp-content/uploads/2024/11/Dona-Coelha-Triquelique08.jpg',
+    desc:'Vibrador bullet potente, discreto e fácil de usar.',
+    benefits:['10 modos de vibração em botão único','Até 60min de bateria','Compacto e silencioso'],
+    badges:['exclusive']
+  },
+  {
+    id:'xodo', name:'Xodó', cat:'toys', price:379.90, variants:['Rosa'],
+    img:'https://www.donacoelha.com/wp-content/uploads/2023/04/dona-coelha-xodo.jpg',
+    desc:'Mini sugador de clitóris discreto, com anel de dedo.',
+    benefits:['10 intensidades de sucção','Silicone atóxico · inclui case','Recarregável USB-C'],
+    badges:[]
+  },
+];
+
+const BADGE_LABEL = {deal:'🎉 Preço especial Estetika', exclusive:'📍 Exclusivo do evento', limited:'⚠️ Estoque limitado'};
+
+function toBRL(n){ return n.toLocaleString('pt-BR',{style:'currency',currency:'BRL'}); }
+
+/* ---------------- ROUTER (páginas via hash) ---------------- */
+const ROUTES = ['catalogo','vendas','b2b','influencer'];
+function routeFromHash(){
+  const h = location.hash.replace('#/','').replace('#','');
+  return ROUTES.includes(h) ? h : 'catalogo';
+}
+function showRoute(route){
+  ROUTES.forEach(r=>{ document.getElementById('page-'+r).hidden = (r!==route); });
+  document.querySelectorAll('nav.menu a[data-route]').forEach(a=>{
+    a.classList.toggle('active-link', a.dataset.route===route);
+  });
+  window.scrollTo(0,0);
+  menu.classList.remove('open');
+}
+window.addEventListener('hashchange', ()=> showRoute(routeFromHash()));
+
+/* ---------------- RENDER CATALOG ---------------- */
+const grid = document.getElementById('grid');
+function renderGrid(filter){
+  grid.innerHTML = '';
+  PRODUCTS.filter(p => filter==='todos' || p.cat===filter).forEach(p=>{
+    const card = document.createElement('div');
+    card.className='card';
+    const badgesHtml = (p.badges||[]).map(b=>`<span class="badge ${b}">${BADGE_LABEL[b]}</span>`).join('');
+    const variantsHtml = p.variants ? `<div class="variants">${p.variants.map(v=>`<span class="variant-pill">${v}</span>`).join('')}</div>` : '';
+    const oldPriceHtml = p.oldPrice ? `<span class="old-price">${toBRL(p.oldPrice)}</span>` : '';
+    const noteHtml = p.note ? `<p class="hint">${p.note}</p>` : '';
+    card.innerHTML = `
+      <div class="card-img">
+        <img src="${p.img}" alt="${p.name}" loading="lazy" onerror="this.style.display='none';this.parentElement.querySelector('.fallback').style.display='flex';">
+        <div class="fallback" style="display:none;align-items:center;justify-content:center;width:100%;height:100%;">${p.name[0]}</div>
+        <div class="badges">${badgesHtml}</div>
+        <span class="cat-tag">${p.cat==='cosmeticos'?'Cosmético':'Toy'}</span>
+      </div>
+      <div class="card-body">
+        <h3>${p.name}</h3>
+        <p class="desc">${p.desc}</p>
+        ${variantsHtml}
+        <ul class="benefits">${p.benefits.map(b=>`<li>${b}</li>`).join('')}</ul>
+        ${noteHtml}
+        <div class="price-row">
+          <div>
+            <div class="price">${toBRL(p.price)}</div>
+            ${oldPriceHtml ? `<small>de ${oldPriceHtml}</small>` : ''}
+          </div>
+        </div>
+      </div>`;
+    grid.appendChild(card);
+  });
+}
+renderGrid('todos');
+
+document.getElementById('filters').addEventListener('click', e=>{
+  if(e.target.tagName!=='BUTTON') return;
+  document.querySelectorAll('#filters button').forEach(b=>b.classList.remove('active'));
+  e.target.classList.add('active');
+  renderGrid(e.target.dataset.filter);
+});
+
+/* ---------------- MOBILE MENU ---------------- */
+const burger = document.getElementById('burgerBtn');
+const menu = document.getElementById('menu');
+burger.addEventListener('click', ()=> menu.classList.toggle('open'));
+
+/* ---------------- TOAST ---------------- */
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>t.classList.remove('show'), 2600);
+}
+
+/* ---------------- VENDAS ---------------- */
+const produtoSelect = document.getElementById('produtoVenda');
+PRODUCTS.forEach(p=>{
+  const opt = document.createElement('option');
+  opt.value = p.id;
+  opt.textContent = `${p.name} — ${toBRL(p.price)}`;
+  produtoSelect.appendChild(opt);
+});
+(function(){
+  const now = new Date();
+  const local = new Date(now.getTime() - now.getTimezoneOffset()*60000);
+  document.getElementById('dataVenda').value = local.toISOString().slice(0,10);
+})();
+
+let sales = JSON.parse(localStorage.getItem('dc_sales')||'[]');
+let cart = [];
+let comprovanteFile = null; // { dataUrl, base64, mime, name }
+const thumbCache = {}; // saleId -> dataUrl (só durante esta sessão)
+
+function saveSales(){ localStorage.setItem('dc_sales', JSON.stringify(sales)); renderSales(); }
+
+function renderCart(){
+  const body = document.getElementById('cartBody');
+  if(cart.length===0){
+    body.innerHTML = `<tr><td colspan="4" class="empty-msg">Nenhum item adicionado ainda.</td></tr>`;
+  } else {
+    body.innerHTML = cart.map((it,i)=>`<tr><td>${it.produto}</td><td>${it.qtd}</td><td>${toBRL(it.subtotal)}</td><td><button type="button" class="remove-btn" data-ci="${i}" title="Remover">✕</button></td></tr>`).join('');
+  }
+  const total = cart.reduce((a,it)=>a+it.subtotal,0);
+  document.getElementById('cartTotal').textContent = toBRL(total);
+}
+renderCart();
+
+document.getElementById('addItemBtn').addEventListener('click', ()=>{
+  const prod = PRODUCTS.find(p=>p.id===produtoSelect.value);
+  const qtd = parseInt(document.getElementById('qtdVenda').value)||1;
+  if(!prod || qtd<1) return;
+  const existing = cart.find(it=>it.id===prod.id);
+  if(existing){ existing.qtd += qtd; existing.subtotal = existing.qtd*prod.price; }
+  else { cart.push({id:prod.id, produto:prod.name, qtd, precoUnit:prod.price, subtotal:prod.price*qtd}); }
+  renderCart();
+  document.getElementById('qtdVenda').value = 1;
+});
+
+document.getElementById('cartBody').addEventListener('click', e=>{
+  if(e.target.dataset.ci !== undefined){
+    cart.splice(parseInt(e.target.dataset.ci),1);
+    renderCart();
+  }
+});
+
+document.getElementById('comprovanteInput').addEventListener('change', async e=>{
+  const file = e.target.files[0];
+  const preview = document.getElementById('comprovantePreview');
+  if(!file){ comprovanteFile = null; preview.innerHTML=''; return; }
+  preview.textContent = 'Processando imagem…';
+  try{
+    const dataUrl = await resizeImageFile(file, 1280, 0.75);
+    comprovanteFile = { dataUrl, base64: dataUrl.split(',')[1], mime:'image/jpeg', name: file.name.replace(/\.[^.]+$/,'') + '.jpg' };
+    preview.innerHTML = `<img src="${dataUrl}" alt="Comprovante" style="max-width:140px;border-radius:10px;margin-top:6px;border:2px solid var(--pink-light);">`;
+  }catch(err){
+    preview.textContent = 'Não foi possível processar a imagem, tente outra foto.';
+    comprovanteFile = null;
+  }
+});
+
+function resizeImageFile(file, maxDim, quality){
+  return new Promise((resolve,reject)=>{
+    const reader = new FileReader();
+    reader.onload = (e)=>{
+      const img = new Image();
+      img.onload = ()=>{
+        let w = img.width, h = img.height;
+        if(w>h && w>maxDim){ h = Math.round(h*maxDim/w); w = maxDim; }
+        else if(h>=w && h>maxDim){ w = Math.round(w*maxDim/h); h = maxDim; }
+        const canvas = document.createElement('canvas');
+        canvas.width = w; canvas.height = h;
+        canvas.getContext('2d').drawImage(img,0,0,w,h);
+        resolve(canvas.toDataURL('image/jpeg', quality));
+      };
+      img.onerror = reject;
+      img.src = e.target.result;
+    };
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+function renderSales(){
+  const body = document.getElementById('salesBody');
+  body.innerHTML='';
+  let total = 0;
+  if(sales.length===0){
+    body.innerHTML = `<tr><td colspan="6" class="empty-msg">Nenhuma venda registrada ainda.</td></tr>`;
+  }
+  sales.forEach((s,i)=>{
+    total += s.total;
+    const itensTxt = s.items.map(it=>`${it.produto}${it.qtd>1?' ×'+it.qtd:''}`).join(', ');
+    const comprovanteHtml = thumbCache[s.id]
+      ? `<img src="${thumbCache[s.id]}" alt="comprovante" style="width:36px;height:36px;object-fit:cover;border-radius:8px;">`
+      : (s.hasComprovante ? '📎' : '—');
+    const tr = document.createElement('tr');
+    tr.innerHTML = `<td>${s.vendedora}</td><td>${itensTxt}</td><td>${toBRL(s.total)}</td><td>${s.data.split('-').reverse().join('/')}</td><td>${comprovanteHtml}</td>
+      <td><button class="remove-btn" data-i="${i}" title="Remover">✕</button></td>`;
+    body.appendChild(tr);
+  });
+  document.getElementById('totalDia').textContent = toBRL(total);
+  document.getElementById('comissaoDia').textContent = toBRL(total*0.1);
+}
+renderSales();
+
+document.getElementById('salesForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const vendedora = document.getElementById('vendedora').value;
+  if(!vendedora){ showToast('Selecione a vendedora'); return; }
+  if(cart.length===0){ showToast('Adicione ao menos um item à compra'); return; }
+  const total = cart.reduce((a,it)=>a+it.subtotal,0);
+  const saleId = 's' + Date.now() + Math.random().toString(36).slice(2,7);
+  const sale = {
+    id: saleId,
+    vendedora,
+    items: cart.map(it=>({produto:it.produto, qtd:it.qtd, subtotal:it.subtotal})),
+    total,
+    data: document.getElementById('dataVenda').value,
+    obs: document.getElementById('obsVenda').value,
+    hasComprovante: !!comprovanteFile
+  };
+  sales.push(sale);
+  saveSales();
+
+  if(comprovanteFile) thumbCache[saleId] = comprovanteFile.dataUrl;
+
+  sendToSheet('vendas', {
+    vendedora: sale.vendedora,
+    data: sale.data,
+    obs: sale.obs,
+    itensJson: JSON.stringify(sale.items),
+    comprovanteBase64: comprovanteFile ? comprovanteFile.base64 : '',
+    comprovanteMime: comprovanteFile ? comprovanteFile.mime : '',
+    comprovanteName: comprovanteFile ? comprovanteFile.name : ''
+  });
+
+  showToast(comprovanteFile ? 'Venda finalizada e comprovante enviado ✓' : 'Venda finalizada ✓');
+
+  cart = []; renderCart();
+  comprovanteFile = null;
+  document.getElementById('comprovantePreview').innerHTML = '';
+  document.getElementById('comprovanteInput').value = '';
+  document.getElementById('obsVenda').value='';
+});
+
+document.getElementById('salesBody').addEventListener('click', e=>{
+  if(e.target.classList.contains('remove-btn')){
+    sales.splice(parseInt(e.target.dataset.i),1);
+    saveSales();
+  }
+});
+
+document.getElementById('clearSales').addEventListener('click', ()=>{
+  if(confirm('Apagar todas as vendas registradas neste dispositivo?')){
+    sales = []; saveSales();
+  }
+});
+
+/* ---------------- B2B ---------------- */
+let b2bLeads = JSON.parse(localStorage.getItem('dc_b2b')||'[]');
+function renderB2b(){
+  const el = document.getElementById('b2bList');
+  el.innerHTML = b2bLeads.length ? `<table><thead><tr><th>Nome</th><th>Empresa</th><th>Telefone</th><th>Insta</th><th></th></tr></thead><tbody>
+    ${b2bLeads.map((l,i)=>`<tr><td>${l.nome}</td><td>${l.empresa||'-'}</td><td>${l.telefone}</td><td>${l.insta||'-'}</td><td><button class="remove-btn" data-i="${i}">✕</button></td></tr>`).join('')}
+  </tbody></table>` : `<p class="empty-msg">Nenhum contato salvo ainda.</p>`;
+}
+renderB2b();
+
+function currentB2b(){
+  return {
+    nome: document.getElementById('b2bNome').value,
+    empresa: document.getElementById('b2bEmpresa').value,
+    telefone: document.getElementById('b2bTelefone').value,
+    email: document.getElementById('b2bEmail').value,
+    insta: document.getElementById('b2bInsta').value,
+    obs: document.getElementById('b2bObs').value,
+  };
+}
+document.getElementById('b2bForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const l = currentB2b();
+  if(!l.nome || !l.telefone){ showToast('Preencha nome e telefone'); return; }
+  b2bLeads.push(l);
+  localStorage.setItem('dc_b2b', JSON.stringify(b2bLeads));
+  renderB2b();
+  sendToSheet('b2b', l);
+  showToast('Contato salvo ✓');
+  e.target.reset();
+});
+document.getElementById('b2bList').addEventListener('click', e=>{
+  if(e.target.classList.contains('remove-btn')){
+    b2bLeads.splice(parseInt(e.target.dataset.i),1);
+    localStorage.setItem('dc_b2b', JSON.stringify(b2bLeads));
+    renderB2b();
+  }
+});
+
+/* ---------------- INFLUENCER ---------------- */
+let infLeads = JSON.parse(localStorage.getItem('dc_inf')||'[]');
+function renderInf(){
+  const el = document.getElementById('infList');
+  el.innerHTML = infLeads.length ? `<table><thead><tr><th>Nome</th><th>Instagram</th><th>Telefone</th><th></th></tr></thead><tbody>
+    ${infLeads.map((l,i)=>`<tr><td>${l.nome}</td><td>${l.insta}</td><td>${l.telefone||'-'}</td><td><button class="remove-btn" data-i="${i}">✕</button></td></tr>`).join('')}
+  </tbody></table>` : `<p class="empty-msg">Nenhum criador salvo ainda.</p>`;
+}
+renderInf();
+
+function currentInf(){
+  return {
+    nome: document.getElementById('infNome').value,
+    insta: document.getElementById('infInsta').value,
+    telefone: document.getElementById('infTelefone').value,
+  };
+}
+document.getElementById('infForm').addEventListener('submit', e=>{
+  e.preventDefault();
+  const l = currentInf();
+  if(!l.nome || !l.insta){ showToast('Preencha nome e Instagram'); return; }
+  infLeads.push(l);
+  localStorage.setItem('dc_inf', JSON.stringify(infLeads));
+  renderInf();
+  sendToSheet('influencer', l);
+  showToast('Criador salvo ✓');
+  e.target.reset();
+});
+document.getElementById('infList').addEventListener('click', e=>{
+  if(e.target.classList.contains('remove-btn')){
+    infLeads.splice(parseInt(e.target.dataset.i),1);
+    localStorage.setItem('dc_inf', JSON.stringify(infLeads));
+    renderInf();
+  }
+});
+
+/* ---------------- INIT ---------------- */
+showRoute(routeFromHash());
+</script>
+</body>
+</html>
